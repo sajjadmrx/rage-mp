@@ -1,12 +1,16 @@
+
+
+
 # RAGE MP
 
 API for getting RAGE MP server info & status.
-
+![Examples](https://cdn.discordapp.com/attachments/807678844252192768/849224975524298802/example.png)
 ## Installation 
 **Install Package**: npm i rage-mp
-
+[![npm version](https://badge.fury.io/js/angular2-expandable-list.svg)](https://www.npmjs.com/package/rage-mp)
 ## Usage
 **Examples**
+
 
 See if server is online (json)
 ```js
