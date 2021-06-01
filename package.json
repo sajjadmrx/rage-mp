@@ -1,0 +1,30 @@
+{
+  "name": "rage-mp",
+  "version": "1.0.0",
+  "description": "API for getting rage-mp server info & status.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajjadmrx/rage-mp.git"
+  },
+  "keywords": [
+    "rage-mp",
+    "api",
+    "rage-mp server status",
+    "rageMp server count",
+    "rage-mp api",
+    "rage-mp js"
+  ],
+  "author": "sajjadmrx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sajjadmrx/rage-mp/issues"
+  },
+  "homepage": "https://github.com/sajjadmrx/rage-mp#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
