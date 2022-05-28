@@ -22,7 +22,7 @@ import { RageMp } from "rage-mp";
 
 # ⚙️Usage
 ```js
-const rageMp = new RageMp({timeout:1000})//option is optional
+const rageMp = new RageMp({timeout:1000})
 
 const server = await rageMp.getSingleServer("ip:port")
 //result:
@@ -48,7 +48,7 @@ const server = await rageMp.getSingleServer("ip:port")
 ```js
 const RageMp = require("rage-mp").default;
 (async () => {
-    const rageMp = new RageMp()
+    const rageMp = new RageMp({})
     const servers = await rageMp.getServers()
     console.log(servers) // servers array
 })();
