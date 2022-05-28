@@ -5,39 +5,55 @@
 
 API for getting RAGE MP server info & status.
 ![Examples](https://cdn.discordapp.com/attachments/807678844252192768/849224975524298802/example.png)
-## Installation 
-**Install Package**: npm i rage-mp
+## 📥 Installation 
+```bash
+npm i rage-mp
+```
 [![npm version](https://badge.fury.io/js/angular2-expandable-list.svg)](https://www.npmjs.com/package/rage-mp)
-## Usage
-**Examples**
-
-
-See if server is online (json)
+## 🧷 import
+> Javascript
 ```js
-const Rage = require("rage-mp") // Import the npm package.
-const srv = new Rage.Server('IP:PORT',{}) // Set the IP with port.
- 
-srv.getAllInfo().then(data => console.log(data)) // Get & log the data!
-
-//if online returns json data
-// if offline,returns error
+const RageMp = require("rage-mp").default;
+```
+> TypeScript
+```ts
+import { RageMp } from "rage-mp";
 ```
 
-Get Player Count (in numbers)
+# ⚙️Usage
 ```js
-const Rage = require("rage-mp") // Import the npm package.
-const srv = new Rage.Server('IP:PORT',{}) // Set the IP with port.
- 
-srv.getPlayers().then(data => console.log(data)) // Get & log the data!
+const rageMp = new RageMp({timeout:1000})//option is optional
+
+const server = await rageMp.getSingleServer("ip:port")
+//result:
+        // name: "server Name
+        //     gamemode: "gangwar",
+        //     url: "rage.mp",
+        //     lang: "en",
+        //     players: 10,
+        //     peak: 1,
+        //     maxplayers: 100,
+        //     ip: "ip:port"
 ```
 
 
-## **ALL FUNCTION REQUESTS**
-- getAllInfo - Get the whole server  - (object)
-- getName - Get the name of the server - (string)
-- getPlayers - Number of players online - (number)
-- getMaxPlayers - Max players that are able to join the server - (number)
-- getPeak - Get the peak of the server
-- url - Get the web url of the server - (string)
-- getGameMod - Get the game mode of the server - (string)
-- getLang - The language of the server - (string)
+
+## ⚡**ALL METHODS**
+- getServers - get all servers 
+- getSingleServer - get single server with ip:port
+- getServersByGamemode - get all servers by gamemode
+- getServersByLang - get all servers by lang
+ 
+## 🪂**EXAMPLES**
+```js
+const RageMp = require("rage-mp").default;
+(async () => {
+    const rageMp = new RageMp()
+    const servers = await rageMp.getServers()
+    console.log(servers) // servers array
+})();
+```
+
+## 📝 TODO
+- add more methods
+- better docs
