@@ -22,18 +22,14 @@ import { RageMp } from "rage-mp";
 
 # ⚙️Usage
 ```js
-const rageMp = new RageMp({timeout:1000})
+const RageMp = require("rage-mp").default;
 
-const server = await rageMp.getSingleServer("ip:port")
-//result:
-        // name: "server Name
-        //     gamemode: "gangwar",
-        //     url: "rage.mp",
-        //     lang: "en",
-        //     players: 10,
-        //     peak: 1,
-        //     maxplayers: 100,
-        //     ip: "ip:port"
+
+(async () => {
+    const rageMp = new RageMp({})
+    const server = await rageMp.getSingleServer("ip:port");
+    console.log(server) // server result
+})();
 ```
 
 
@@ -45,12 +41,44 @@ const server = await rageMp.getSingleServer("ip:port")
 - getServersByLang - get all servers by lang
  
 ## 🪂**EXAMPLES**
+
+#### ``getServers``
 ```js
 const RageMp = require("rage-mp").default;
 (async () => {
     const rageMp = new RageMp({})
     const servers = await rageMp.getServers()
     console.log(servers) // servers array
+})();
+```
+
+#### ``getSingleServer``
+```js
+const RageMp = require("rage-mp").default;
+(async () => {
+    const rageMp = new RageMp({})
+    const result = await rageMp.getSingleServer("rage2.gta5grand.com:22005")
+    console.log(result) // server info
+})();
+```
+
+#### ``getServersByGamemode``
+```js
+const RageMp = require("rage-mp").default;
+(async () => {
+    const rageMp = new RageMp({})
+    const result = await rageMp.getServersByGamemode("rp")
+    console.log(result) // server info
+})();
+```
+
+#### ``getServersByLang``
+```js
+const RageMp = require("rage-mp").default;
+(async () => {
+    const rageMp = new RageMp({})
+    const result = await rageMp.getServersByLang("en")
+    console.log(result) // server info
 })();
 ```
 
